@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polisi Privasi — Standard4Helper</title>
+<link rel="icon" href="icon48.png">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#134e4a;--teal-700:#0f766e;--muted:#5b7d79;--line:#d7ece8;--bg:#fbfefd}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;color:#1f2f2d;background:var(--bg);line-height:1.7}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px 60px}
+a{color:var(--teal-700);font-weight:700}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--teal-700);text-decoration:none;margin-bottom:28px}
+.brand img{width:30px;height:30px;border-radius:8px}
+h1{color:var(--teal-900);font-weight:900;margin:0 0 4px}
+h2{color:var(--teal-900);font-size:1.15rem;margin:32px 0 8px}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin:8px 0}
+th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--teal-900)}
+code{background:#eef7f5;padding:1px 6px;border-radius:5px}
+.box{background:#f0fdfa;border:1px solid #ccfbf1;border-radius:12px;padding:16px 18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="index.html"><img src="icon48.png" alt="">Standard4Helper</a>
+  <h1>Polisi Privasi</h1>
+  <p class="meta">Berkuat kuasa: 11 Oktober 2026</p>
+
+  <div class="box"><b>Ringkasnya:</b> Standard4Helper tidak mengumpul, menghantar, menjual atau berkongsi sebarang data peribadi. Semua data kekal dalam browser di komputer anda.</div>
+
+  <h2>1. Data yang diproses</h2>
+  <p>Extension ini hanya memproses data yang anda berikan sendiri:</p>
+  <ul>
+    <li><b>Fail CSV skor</b> yang anda muat naik (sub-aspek, item, skor).</li>
+    <li><b>Nama guru</b> yang dibaca daripada nama fail CSV, untuk disemak dengan nama di page MOEIS.</li>
+    <li><b>Tetapan</b> seperti status Auto Navigasi dan kemajuan pengisian.</li>
+  </ul>
+
+  <h2>2. Di mana data disimpan</h2>
+  <p>Data di atas disimpan menggunakan <code>chrome.storage.local</code> dan <code>sessionStorage</code> dalam browser anda. Ia tidak dihantar kepada pembangun atau mana-mana pihak ketiga. Anda boleh memadamnya bila-bila masa melalui butang padam/reset dalam panel sisi, atau dengan membuang extension.</p>
+
+  <h2>3. Sambungan rangkaian</h2>
+  <p>Extension ini hanya berhubung dengan <code>moeisins.moe.gov.my</code>, iaitu untuk menghantar skor ke borang Standard 4 yang sedang anda buka. Ini sama seperti anda menekan butang Simpan sendiri, menggunakan sesi log masuk anda yang sedia ada. Tiada analitik, iklan, atau penjejakan.</p>
+
+  <h2>4. Kebenaran (permissions) yang digunakan</h2>
+  <table>
+    <tr><th>Kebenaran</th><th>Tujuan</th></tr>
+    <tr><td><code>storage</code></td><td>Menyimpan skor CSV dan tetapan dalam browser anda.</td></tr>
+    <tr><td><code>sidePanel</code></td><td>Memaparkan panel sisi untuk muat CSV dan pantau kemajuan.</td></tr>
+    <tr><td><code>moeisins.moe.gov.my</code></td><td>Mengisi dan menyimpan skor pada page pengisian skor Standard 4 sahaja.</td></tr>
+  </table>
+
+  <h2>5. Kata laluan</h2>
+  <p>Extension ini tidak meminta, membaca atau menyimpan kata laluan MOEIS anda.</p>
+
+  <h2>6. Penafian</h2>
+  <p>Standard4Helper ialah alat bantu persendirian dan bukan produk rasmi Kementerian Pendidikan Malaysia atau MOEIS.</p>
+
+  <h2>7. Hubungi</h2>
+  <p>Sebarang pertanyaan berkaitan privasi: <a href="mailto:cikgujep@gmail.com">cikgujep@gmail.com</a></p>
+
+  <p style="margin-top:40px"><a href="index.html">← Kembali ke laman utama</a></p>
+</div>
+</body>
+</html>
