@@ -246,6 +246,8 @@ table.skor{width:100%;border-collapse:collapse;font-size:.9rem}
 #alat{scroll-margin-top:32px}
 .pasang-dulu{margin:10px 0 0;font-weight:700;color:var(--muted)}
 .ucapan{display:inline-block;margin:14px 0 0;padding:10px 18px;background:#fff3c4;border-radius:12px;font-weight:800;color:var(--teal-900)}
+.video-tutorial{margin:36px auto 0;max-width:900px;border-radius:20px;overflow:hidden;background:var(--teal-900);box-shadow:0 20px 40px -25px rgba(18,53,127,.4)}
+.video-tutorial video{display:block;width:100%;height:auto}
 /* penutup dua langkah */
 .final>div{position:relative;z-index:1}
 .final .pilihan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:20px;margin-top:8px;text-align:left}
@@ -377,6 +379,12 @@ table.skor{width:100%;border-collapse:collapse;font-size:.9rem}
     <p class="lead">Dapatkan CSV dengan cara yang paling sempat, kemudian extension uruskan selebihnya di MOEIS.</p>
   </div>
   <div class="wrap">
+    <div class="video-tutorial" id="tutorial">
+      <video controls preload="metadata" playsinline poster="video/cara-guna-poster.jpg" width="1920" height="1080" aria-label="Video cara guna Standard4Helper, dari pasang extension hingga skor masuk MOEIS">
+        <source src="video/cara-guna.mp4" type="video/mp4">
+        <a href="video/cara-guna.mp4">Muat turun video cara guna</a>
+      </video>
+    </div>
     <div class="steps">
       <div class="stepcard">
         <h3>Pasang extension</h3>
