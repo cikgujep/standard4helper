@@ -237,8 +237,12 @@ borang.addEventListener('submit', async (e) => {
     });
     const r = await res.json();
     if (r.ok) {
-      mesej.textContent = 'Terima kasih, ' + borang.elements.nama.value.trim() + '. Anda sudah didaftarkan.';
+      const nama = borang.elements.nama.value.trim();
+      mesej.textContent = 'Terima kasih, ' + nama + '. Anda sudah didaftarkan.';
+      $('ucapan').textContent = 'Terima kasih, ' + nama + '. Ini dia, tukar borang anda di bawah.';
+      $('ucapan').hidden = false;
       borang.reset();
+      bukaAlat();
     } else {
       mesej.textContent = r.mesej || GAGAL;
     }
@@ -255,12 +259,16 @@ const langkah1 = $('langkah1');
 const langkah2 = $('langkah2');
 langkah2.hidden = true;
 $('alat').hidden = true;
-$('keLangkah2').addEventListener('click', () => {
+function bukaAlat() {
   langkah1.hidden = true;
   langkah2.hidden = false;
   $('alat').hidden = false;
   $('alat').scrollIntoView({ block: 'start' });
   $('t1').focus({ preventScroll: true });
+}
+$('keLangkah2').addEventListener('click', () => {
+  $('ucapan').hidden = true;
+  bukaAlat();
 });
 $('keLangkah1').addEventListener('click', () => {
   langkah2.hidden = true;
