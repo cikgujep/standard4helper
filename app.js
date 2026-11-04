@@ -274,8 +274,8 @@ $('keLangkah2').addEventListener('click', () => {
   langkah1.hidden = true;
   langkah2.hidden = false;
   $('alat').hidden = false;
-  langkah2.focus({ preventScroll: true });
-  $('daftar').scrollIntoView({ block: 'start' });
+  $('alat').scrollIntoView({ block: 'start' });
+  $('t1').focus({ preventScroll: true });
 });
 $('keLangkah1').addEventListener('click', () => {
   langkah2.hidden = true;
