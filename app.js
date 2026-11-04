@@ -24,21 +24,6 @@ tab.forEach((t, i) => {
 pilihTab(tab[0]);
 document.querySelectorAll('[data-ke-tab]').forEach((a) => a.addEventListener('click', () => pilihTab(document.getElementById(a.dataset.keTab))));
 
-/* Salin prompt */
-const salin = document.getElementById('salinPrompt');
-salin.addEventListener('click', async () => {
-  const teks = document.getElementById('teksPrompt');
-  const asal = salin.dataset.asal || (salin.dataset.asal = salin.textContent);
-  try {
-    await navigator.clipboard.writeText(teks.value);
-    salin.textContent = 'Prompt disalin';
-  } catch (e) {
-    teks.focus(); teks.select();
-    salin.textContent = 'Tekan Ctrl+C untuk salin';
-  }
-  setTimeout(() => { salin.textContent = asal; }, 2500);
-});
-
 /* Kalkulator */
 const $ = (id) => document.getElementById(id);
 const MINIT_EXTENSION = 2;
